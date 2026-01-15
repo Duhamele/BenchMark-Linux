@@ -4,8 +4,7 @@
 
 #ifndef SIMULATION_PROJECT_MANAGER_CPU_H
 #define SIMULATION_PROJECT_MANAGER_CPU_H
-#include <array>
-#include <mutex>
+
 #include <vector>
 
 enum CPU_Status

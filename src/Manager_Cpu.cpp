@@ -3,7 +3,7 @@
 //
 
 #include "Manager_Cpu.h"
-
+#include <mutex>
 #include <cstring>
 #include <thread>
 Manager_Cpu manager_cpu_benchmark;
