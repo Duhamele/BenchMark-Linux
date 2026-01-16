@@ -11,7 +11,7 @@ class BenchMarkTest;
 class BenchMarkRegister
 {
     public:
-    static BenchMarkTest& add_benchmark_test(BenchMarkTest &bench_mark,std::string category="default");
+    static BenchMarkTest& add_benchmark_test(BenchMarkTest bench_mark,std::string category="default");
 };
 class BenchMarkTest
 {

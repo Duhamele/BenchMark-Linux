@@ -49,7 +49,28 @@ public:
 
 
     }
+    BenchMarkTest& add_benchmark(BenchMarkTest bench_mark, std::string category)
+    {
+        if (benchmarks.contains(category))
+        {
+            benchmarks[category].push_back(bench_mark);
+            return benchmarks[category].back();
+        }
+        else
+        {
+            benchmarks.insert({category,{bench_mark}});//TODO à verify
+            return benchmarks[category].back();
+        }
+    }
 
 
     
 };
+
+BenchMarkManager* bench_mark_manager;
+BenchMarkTest& BenchMarkRegister::add_benchmark_test(BenchMarkTest bench_mark, std::string category)
+{
+    static BenchMarkManager manager;
+    bench_mark_manager=&manager;
+    return manager.add_benchmark(bench_mark,category);
+}
