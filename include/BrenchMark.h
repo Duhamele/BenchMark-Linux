@@ -6,7 +6,7 @@
 #define SIMULATION_PROJECT_BRENCHMARK_H
 #include <string>
 using BenchFn = void(*)();
-class BenchMarkManager;
+
 class BenchMarkTest;
 class BenchMarkRegister
 {

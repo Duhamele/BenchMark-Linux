@@ -4,4 +4,5 @@ add_library(BenchMark-Linux STATIC TimerCpu.cpp
         Manager_Cpu.h
         Info_Cpu.cpp
         Info_Cpu.h
-        )
+        BenchMark.cpp
+)
