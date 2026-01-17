@@ -50,6 +50,17 @@ class BenchMarkTest
 
 
 protected:
+    /**
+     * @brief Constructor of the virtual class BenchMarkTest for data.
+     *        Constructeur de la classe virtuelle BenchMarkTest pour les données.
+     *
+     * @param name The name of the benchmark.
+     *             Le nom du benchmark.
+     * @param line The line number where the benchmark was declared (using the __LINE__ macro).
+     *             Le numéro de ligne où le benchmark a été déclaré (en utilisant la macro __LINE__).
+     * @param file The file where the benchmark was declared (using the __FILE__ macro).
+     *             Le fichier où le benchmark a été déclaré (en utilisant la macro __FILE__).
+     */
     BenchMarkTest(std::string name,int line,std::string file);
     private:
     const std::string name;
