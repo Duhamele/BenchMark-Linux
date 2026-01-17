@@ -4,9 +4,13 @@
 
 #ifndef SIMULATION_PROJECT_BENCHMARKUNIT_H
 #define SIMULATION_PROJECT_BENCHMARKUNIT_H
-
-
 #include "BrenchMark.h"
+
+#define BENCHMARK_UNIT(function,name,category) BenchMarkTestUnitaire ##name##category =\
+    BenchMarkRegister::add_benchmark_test( \
+        BenchMarkTestUnitaire( #name, __LINE__ ,__FILE__,#function),#category);
+
+
 template<typename T>
 class BenchMarkTestUnitaire:BenchMarkTest
 {
@@ -16,7 +20,8 @@ class BenchMarkTestUnitaire:BenchMarkTest
     using BenchFn = T(*)();
     BenchMarkTestUnitaire(std::string name,int line,std::string file,BenchFn
     function):BenchMarkTest(name,line,file),function(function)
-    {}
+    {
+    }
 private:
     BenchFn function;
 

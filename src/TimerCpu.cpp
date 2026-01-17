@@ -6,7 +6,7 @@
 #include <sched.h>
 #include <bits/cpu-set.h>
 
-TimerCpu::TimerCpu():
+TimerCpu::TimerCpu()
 {
 
 
