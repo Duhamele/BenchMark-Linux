@@ -15,7 +15,7 @@ public:
 
 
     std::map<std::string,std::vector<std::string>> benchmarks_category;
-    std::map<std::string,std::vector<BenchMarkTest>> benchmarks;
+    std::map<std::string,std::vector<BenchMarkTest*>> benchmarks;
 
     BenchMarkManager()
     {
@@ -49,7 +49,7 @@ public:
 
 
     }
-    BenchMarkTest& add_benchmark(BenchMarkTest bench_mark, std::string category)
+    BenchMarkTest* add_benchmark(BenchMarkTest *bench_mark, std::string category)
     {
         if (benchmarks.contains(category))
         {
@@ -58,7 +58,7 @@ public:
         }
         else
         {
-            benchmarks.insert({category,{bench_mark}});//TODO à verify
+            benchmarks.insert({category,{bench_mark}});
             return benchmarks[category].back();
         }
     }
@@ -68,9 +68,15 @@ public:
 };
 
 BenchMarkManager* bench_mark_manager;
-BenchMarkTest& BenchMarkRegister::add_benchmark_test(BenchMarkTest bench_mark, std::string category)
+BenchMarkTest* BenchMarkRegister::add_benchmark_test(BenchMarkTest* bench_mark, std::string category)
 {
     static BenchMarkManager manager;
     bench_mark_manager=&manager;
     return manager.add_benchmark(bench_mark,category);
+}
+
+BenchMarkTest::BenchMarkTest(std::string name, int line, std::string file):
+name(name),line(line),file(file)
+{
+
 }

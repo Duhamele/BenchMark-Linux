@@ -11,7 +11,7 @@ class BenchMarkTest;
 class BenchMarkRegister
 {
     public:
-    static BenchMarkTest& add_benchmark_test(BenchMarkTest bench_mark,std::string category="default");
+    static BenchMarkTest* add_benchmark_test(BenchMarkTest* bench_mark,std::string category="default");
 };
 class BenchMarkTest
 {
@@ -45,7 +45,7 @@ class BenchMarkTest
     {
         return file;
     }
-    virtual void run();//TODO signature à changer
+    virtual void run()=0;//TODO signature à changer
     virtual ~BenchMarkTest()=default;
 
 

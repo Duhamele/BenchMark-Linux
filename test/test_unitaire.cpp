@@ -2,4 +2,11 @@
 // Created by duhamel on 17/01/2026.
 //
 #include "BenchMarkUnit.h"
-BENCHMARK_UNIT({return;},test_1,lesr11)
+
+
+int foo()
+{
+    return 42;
+}
+
+BENCHMARK_UNIT(foo,test_1,lesr11);
