@@ -18,13 +18,13 @@ class BenchMarkTestUnitaire: public BenchMarkTest
 
     public:
     using BenchFn = T(*)();
-    BenchMarkTestUnitaire(std::string name,int line,std::string file,BenchFn
+    BenchMarkTestUnitaire(const std::string& name, const int line, const std::string& file,BenchFn
     function):BenchMarkTest(name,line,file),function(function)
     {
     }
     void run() override
     {
-        //TODO
+
     }
     ~BenchMarkTestUnitaire()=default;
 private:

@@ -20,7 +20,7 @@ class BenchMarkTest
      * @brief give the test's name
      * @return the name of test
      */
-    const std::string& get_name() const
+    [[nodiscard]] const std::string& get_name() const
     {
         return name;
     }
@@ -31,7 +31,7 @@ class BenchMarkTest
  * @return The line number.
  *         Numéro de ligne.
  */
-    int get_line() const
+    [[nodiscard]] int get_line() const
     {
         return line;
     }
@@ -41,7 +41,7 @@ class BenchMarkTest
  * @return The file.
  *         Nom du fichier.
  */
-    const std::string& get_file() const
+    [[nodiscard]] const std::string& get_file() const
     {
         return file;
     }
