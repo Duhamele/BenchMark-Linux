@@ -9,7 +9,7 @@
 #include <fstream>
 #include <string>
 #include <sys/sysinfo.h>
-#include <hwloc.h>
+
 #include <thread>
 
 std::string cpu_model_linux_() {

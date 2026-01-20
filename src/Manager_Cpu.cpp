@@ -33,9 +33,7 @@ Manager_Cpu::Manager_Cpu()
     }
 }
 
-Manager_Cpu::~Manager_Cpu()
-{
-}
+Manager_Cpu::~Manager_Cpu()=default;
 
 int Manager_Cpu::get_cpu_free()
 {

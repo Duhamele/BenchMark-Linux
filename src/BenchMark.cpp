@@ -49,7 +49,7 @@ public:
 
 
     }
-    BenchMarkTest* add_benchmark(BenchMarkTest *bench_mark, std::string category)
+    BenchMarkTest* add_benchmark(BenchMarkTest *bench_mark, const std::string &category)
     {
         if (benchmarks.contains(category))
         {
@@ -76,7 +76,7 @@ BenchMarkTest* BenchMarkRegister::add_benchmark_test(BenchMarkTest* bench_mark, 
 }
 
 BenchMarkTest::BenchMarkTest(std::string name, int line, std::string file):
-name(name),line(line),file(file)
+name(std::move(name)),line(line),file(std::move(file))
 {
 
 }
