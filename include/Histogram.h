@@ -14,6 +14,9 @@ struct Histogram
     std::pair<double,double> interval(int _case)const;
     double value(double point) const;
     double value(int _case) const;
+    double average()const;
+    double median()const;
+
 
 
 
