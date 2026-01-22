@@ -27,6 +27,8 @@ class BenchMarkTestUnitaire: public BenchMarkTest
 
     }
     ~BenchMarkTestUnitaire()=default;
+protected:
+
 private:
     BenchFn function;
 

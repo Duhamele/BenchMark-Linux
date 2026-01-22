@@ -1,0 +1,8 @@
+PROJECT_NAME           = Benchmark-Linux
+
+OUTPUT_DIRECTORY       = doc
+
+INPUT                  = include
+
+FILE_PATTERNS          = *.h
+                          *.cpp

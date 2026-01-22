@@ -29,7 +29,7 @@ typedef std::chrono::time_point<std::chrono::high_resolution_clock> time_real_t;
  */
 struct Duration_Timer_Cpu
 {
-    long long int cpu_duration; /**< CPU duration */
+    long long int cpu_duration; /**< CPU duration in nanoseconds */
     long long int real_duration; /**< Real duration */
 };
 
