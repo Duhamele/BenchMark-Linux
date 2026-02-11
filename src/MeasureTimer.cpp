@@ -114,6 +114,16 @@ long double MeasureTimerBase::variance()
     }
 }
 
+long double MeasureTimerBase::coef_variance()
+{
+    return standard_deviation()/average();
+}
+
+long double MeasureTimerBase::standard_deviation()
+{
+    return sqrt(variance());
+}
+
 Histogram MeasureTimerBase::histogram()
 {
     sort();

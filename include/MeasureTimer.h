@@ -24,6 +24,8 @@ public:
     long long int p99();
     long long int percentile(float p);
     long double variance();
+    long double coef_variance();
+    long double standard_deviation();
     Histogram histogram();
 };
 
