@@ -5,7 +5,8 @@
 
 #include <algorithm>
 #include <limits.h>
-
+#include <math.h>
+#include <stdexcept>
 
 void MeasureTimerBase::sort()
 {
@@ -62,6 +63,36 @@ long long int MeasureTimerBase::median()
     {
         return values[values.size()/2];
     }
+}
+
+long long int MeasureTimerBase::p95()
+{
+    return percentile(0.95);
+}
+
+long long int MeasureTimerBase::p99()
+{
+    return percentile(0.99);
+}
+
+long long int MeasureTimerBase::percentile(float p)
+{
+    if (values.empty()||p<0.f||p>1.f)
+    {
+        throw std::runtime_error("MeasureTimerBase::percentile(): value is empty");
+    }
+
+    sort();
+    int index=static_cast<int>(ceil(values.size() * p))-1;
+    if (index<0)
+    {
+        index=0;
+    }else if (index>values.size()-1)
+    {
+        index=values.size()-1;
+    }
+    return values[index];
+
 }
 
 long double MeasureTimerBase::variance()

@@ -19,6 +19,10 @@ public:
     long long int min();
     long long int max();
     long long int median();
+    long long int p95();
+
+    long long int p99();
+    long long int percentile(float p);
     long double variance();
     Histogram histogram();
 };
